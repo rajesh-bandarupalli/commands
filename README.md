@@ -15,7 +15,9 @@
 
 **Restore MongoDB data:**
 Import all the json files into specified `DATABASE_NAME` in local machine.
+
 **Syntax:** `mongorestore -d DATABASE_NAME <location where json files are saved>`
+
 **Eg:** `mongorestore -d EMPLOYEE /Users/Rajesh/data`
 
 **Import JSON file to MongoDB:**
@@ -23,6 +25,7 @@ Import all the json files into specified `DATABASE_NAME` in local machine.
 (or)
 
     mongoimport --db DATABASE_NAME --collection COLLECTION_NAME --file FILE.json --jsonArray
+
 
 **Eg:** `mongoimport --db EMPLOYEE --collection employeedata --file employeedata.json`
 
@@ -40,13 +43,20 @@ https://www.url-encode-decode.com/
 ## Mac commands:
 
 **List running processes on a particular port on Mac:**
+
 **Syntax:** `lsof -i :PORT_NUMBER`
+
 **Eg:** `lsof -i :8080`
 
 **Kill a running process on a particular port on Mac:**
+
 **Syntax:** `kill -9 PROCESS_ID`
+
 **Eg:** `kill -9 8080`
-**How to reset Mac default shell:** `chsh -s /bin/bash`
+
+**How to reset Mac default shell:**
+ `chsh -s /bin/bash`
+
 http://osxdaily.com/2012/03/21/change-shell-mac-os-x/
 
 ## Spring Framework:
@@ -54,7 +64,7 @@ How to configure `application.yml` file to read the values from Environment vari
 
     spring:
         data:
-        	mongoDB:
-    	    	uri: ${DATABASE_URI:mongodb://localhost:27017/EMPLOYEE}
+            mongoDB:
+    	        uri: ${DATABASE_URI:mongodb://localhost:27017/EMPLOYEE}
 
 
